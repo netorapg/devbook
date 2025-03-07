@@ -26,10 +26,11 @@ func Carregar() {
 	if erro != nil {
 		Porta = 9000
 	}
-
 	StringConexaoBanco = fmt.Sprintf(
+		"user=%s password=%s dbname=%s sslmode=disable",
 		os.Getenv("DB_USUARIO"),
 		os.Getenv("DB_SENHA"),
 		os.Getenv("DB_NOME"),
 	)
+
 }
